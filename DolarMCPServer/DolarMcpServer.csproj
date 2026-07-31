@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>DolarMcpServer</RootNamespace>
+    <AssemblyName>DolarMcpServer</AssemblyName>
+    <InvariantGlobalization>true</InvariantGlobalization>
+
+    <!--
+      El servidor MCP se comunica con el cliente (Claude Desktop / VS Code) por stdio.
+      Cualquier salida "sucia" en stdout (logs, Console.WriteLine, banners) rompe el
+      protocolo JSON-RPC. Por eso NO se debe escribir nada a Console.Out manualmente
+      en ningún punto del código; todo el logging va a stderr (ver Program.cs).
+    -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ModelContextProtocol" Version="0.3.0-preview.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "dolar-argentina": {
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "C:\\ruta\\a\\tu\\proyecto\\DolarMcpServer\\DolarMcpServer.csproj"
+      ]
+    }
+  }
+}
